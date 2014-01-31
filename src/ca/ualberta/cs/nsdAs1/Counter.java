@@ -1,11 +1,10 @@
 package ca.ualberta.cs.nsdAs1;
-import java.io.Serializable;
+
 import java.util.ArrayList;
 import java.util.Date;
 
 
-public class Counter implements Serializable {
-	private static final long serialVersionUID = 7773073908286106994L;
+public class Counter {
 	protected ArrayList<Count> count;
 	protected Date timestamp;
 	private String name;
