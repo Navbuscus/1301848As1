@@ -39,6 +39,7 @@ public class MainActivity extends Activity {
 		
 		
 		Button newCounterButton = (Button) findViewById(R.id.newCounter);
+		//did not implement clicking on listview
 		
 		//when clicking new counter button open dialog box
 		newCounterButton.setOnClickListener(new OnClickListener() {
@@ -55,7 +56,6 @@ public class MainActivity extends Activity {
 						.setCancelable(false)
 						.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 									public void onClick(DialogInterface dialog, int id) {
-										//check if name is already in counter list
 										//ENTER COUNTER ACTIVITY HERE!
 										counterList.addToList(new Counter(inputCounterName.toString()));
 										SaveInFile(counterList);
@@ -85,7 +85,7 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onResume(){
 		super.onResume();
-		
+		//populate listview
 		ListView counterListView = (ListView) findViewById(R.id.counterList);
 		counterList = LoadFromFile();
 		Counter[] counters = new Counter[counterList.ListSize()];
@@ -99,6 +99,8 @@ public class MainActivity extends Activity {
 		counterListView.setAdapter(adapter);
 		
 	}
+	
+	//load json string from file and return counterList
 	private CounterList LoadFromFile(){
 		CounterList list = new CounterList();
 		try {
@@ -123,6 +125,8 @@ public class MainActivity extends Activity {
 		return list;
 		
 	}
+	
+	//save counterList into file as json object
 	public void SaveInFile(CounterList counterList){
 		try {
 			FileOutputStream fos = openFileOutput(FILENAME,
