@@ -7,4 +7,5 @@
 	<string name = "New">New Counter</string>
 	<string name="Ok">Okay</string>
 	<string name="cancel">Cancel</string>
+	<string name="counterName">Enter counter name:</string>
 </resources>
