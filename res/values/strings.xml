@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">1301848As1</string>
+    <string name="action_settings">Settings</string>
+    <string name="Counter">Counters</string>
+	<string name = "New">New Counter</string>
+	<string name="Ok">Okay</string>
+	<string name="cancel">Cancel</string>
+</resources>
